@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bewerbung – Arthur Schmidt</title>
+  <meta name="description" content="Digitale Bewerbungsseite von Arthur Schmidt." />
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6470;
+      --primary: #2563eb;
+      --accent: #10b981;
+      --border: #e5e7eb;
+      --radius: 18px;
+      --shadow: 0 6px 16px rgba(0,0,0,.08);
+      --maxw: 860px;
+    }
+
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter; background: var(--bg); color: var(--text); }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px }
+    header { background: var(--panel); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:50 }
+    .nav { display:flex; justify-content:space-between; align-items:center; height:70px }
+    .brand { font-weight:800; font-size:1.2rem; color: var(--primary) }
+    .menu a { margin-left: 20px; color: var(--muted); text-decoration:none; font-weight:600 }
+
+    section { padding:60px 0 }
+    h1,h2,h3 { margin:0 0 10px }
+    p { margin:0 0 14px; line-height:1.6 }
+    .lead { color: var(--muted) }
+
+    .card { background: var(--panel); padding: 22px; border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow) }
+    .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 20px }
+    @media(max-width:700px){ .grid-2 { grid-template-columns: 1fr } }
+
+    .btn { display:inline-block; padding:12px 18px; border-radius:12px; background: var(--primary); color:white; text-decoration:none; font-weight:600 }
+    footer { border-top:1px solid var(--border); padding:20px 0; color:var(--muted); text-align:center }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Bewerbung – Arthur Schmidt</div>
+      <nav class="menu">
+        <a href="#about">Über mich</a>
+        <a href="#skills">Fähigkeiten</a>
+        <a href="#education">Schule & Interessen</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container grid-2">
+      <div>
+        <h1>Hallo, ich bin Arthur Schmidt</h1>
+        <p class="lead">Schüler – angestrebte Ausbildung: Fachinformatiker für Systemintegration</p>
+        <p>Ich bin 15 Jahre alt, noch in der Schule und interessiere mich stark für IT-Systeme. Besonders gerne beschäftige ich mich mit Betriebssystemen, Hardware und IT-Sicherheit. Mein Ziel ist es, eine Ausbildung als Fachinformatiker für Systemintegration zu beginnen und mein Wissen weiter auszubauen.</p>
+        <a href="#contact" class="btn">Kontakt aufnehmen</a>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/s7XbLYB.jpeg" alt="Portrait von Arthur Schmidt" style="width:100%; border-radius:12px" />
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Fähigkeiten</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Technische Skills</h3>
+          <ul>
+            <li>Betriebssysteme: Windows</li>
+            <li>Hardware: Installation, Konfiguration, Wartung</li>
+            <li>IT-Sicherheit: Benutzerrechte, Firewalls, Backup & Recovery</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Teamfähigkeit</li>
+            <li>Analytisches Denken</li>
+            <li>Zuverlässigkeit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Schulische Laufbahn & Interessen</h2>
+      <div class="card">
+        <h3>Schule</h3>
+        <p>Ich besuche derzeit die Artur Becker Oberschule und befinde mich in der zehnten Klasse. Besonders interessiere ich mich für Informatik und Technik.</p>
+        <h3>Interessen</h3>
+        <p>Ich beschäftige mich in meiner Freizeit gerne mit Computern, Betriebssystemen und IT-Sicherheit. Außerdem habe ich Spaß daran, technische Probleme zu lösen und neues Wissen in diesem Bereich zu sammeln.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p><strong>Email:</strong> arthur.valentin09@gmail.com</p>
+        <p><strong>Telefon:</strong> 017675338726</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Arthur Schmidt – Digitale Bewerbung</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
